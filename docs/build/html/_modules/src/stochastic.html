@@ -1,68 +1,34 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>src.stochastic &mdash; AlphaTeam 0.0.1 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>src.stochastic &#8212; AlphaTeam 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  </head><body>
+  
 
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
           
-          
-          <a href="../../index.html" class="icon icon-home">
-            AlphaTeam
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"></div>
-        </div>
-      </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">AlphaTeam</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
-      <li class="breadcrumb-item active">src.stochastic</li>
-      <li class="wy-breadcrumbs-aside">
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+          <div class="body" role="main">
+            
   <h1>Source code for src.stochastic</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Author: Alpha Team Group Project</span>
@@ -108,16 +74,17 @@
 <span class="c1"># -------------------------------------- FUNCTIONS -------------------------------------</span>
 
 
-<div class="viewcode-block" id="estimate_shortest_path_length"><a class="viewcode-back" href="../../src.html#src.stochastic.estimate_shortest_path_length">[docs]</a><span class="k">def</span> <span class="nf">estimate_shortest_path_length</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">10_000</span><span class="p">):</span>
+<div class="viewcode-block" id="estimate_shortest_path_length"><a class="viewcode-back" href="../../src.html#src.stochastic.estimate_shortest_path_length">[docs]</a><span class="k">def</span> <span class="nf">estimate_shortest_path_length</span><span class="p">(</span><span class="n">networkGraphs</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">10_000</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :Function: Estimate shortest path length between over a iterations number of samples</span>
-<span class="sd">    :param G: Graph</span>
-<span class="sd">    :type G: networkx.classes.graph.Graph</span>
+<span class="sd">    :param networkGraphs: NetworkGraphs object</span>
+<span class="sd">    :type networkGraphs: src.NetworkGraphs.NetworkGraphs</span>
 <span class="sd">    :param iterations: Number of samples</span>
 <span class="sd">    :type iterations: int</span>
 <span class="sd">    :return: DataFrame of shortest path lengths</span>
 <span class="sd">    :rtype: pandas.core.frame.DataFrame</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">networkGraphs</span><span class="o">.</span><span class="n">Graph</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
     <span class="n">lengths</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -129,7 +96,10 @@
         <span class="k">except</span> <span class="n">nx</span><span class="o">.</span><span class="n">NetworkXNoPath</span><span class="p">:</span>
             <span class="k">pass</span>
 
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lengths</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Length&#39;</span><span class="p">])</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;Sample&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lengths</span><span class="p">)),</span>
+        <span class="s1">&#39;Shortest Path Length&#39;</span><span class="p">:</span> <span class="n">lengths</span><span class="p">,</span>
+    <span class="p">})</span>
 
     <span class="k">return</span> <span class="n">df</span></div>
 
@@ -137,16 +107,17 @@
 <span class="c1"># -------------------------------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="estimate_clustering_coefficient"><a class="viewcode-back" href="../../src.html#src.stochastic.estimate_clustering_coefficient">[docs]</a><span class="k">def</span> <span class="nf">estimate_clustering_coefficient</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">10_000</span><span class="p">):</span>
+<div class="viewcode-block" id="estimate_clustering_coefficient"><a class="viewcode-back" href="../../src.html#src.stochastic.estimate_clustering_coefficient">[docs]</a><span class="k">def</span> <span class="nf">estimate_clustering_coefficient</span><span class="p">(</span><span class="n">networkGraphs</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">10_000</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :Function: Estimate clustering coefficient over a iterations number of samples</span>
-<span class="sd">    :param G: Graph</span>
-<span class="sd">    :type G: networkx.classes.graph.Graph</span>
+<span class="sd">    :param networkGraphs: NetworkGraphs object</span>
+<span class="sd">    :type networkGraphs: src.NetworkGraphs.NetworkGraphs</span>
 <span class="sd">    :param iterations: Number of samples</span>
 <span class="sd">    :type iterations: int</span>
 <span class="sd">    :return: DataFrame of clustering coefficients</span>
 <span class="sd">    :rtype: pandas.core.frame.DataFrame</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">networkGraphs</span><span class="o">.</span><span class="n">Graph</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
     <span class="n">coefficients</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -155,36 +126,76 @@
         <span class="n">coefficient</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">clustering</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
         <span class="n">coefficients</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">coefficient</span><span class="p">)</span>
 
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">coefficients</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Coefficient&#39;</span><span class="p">])</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;Sample&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coefficients</span><span class="p">)),</span>
+        <span class="s1">&#39;Clustering Coefficient&#39;</span><span class="p">:</span> <span class="n">coefficients</span><span class="p">,</span>
+    <span class="p">})</span>
 
     <span class="k">return</span> <span class="n">df</span></div>
 </pre></div>
 
-           </div>
           </div>
-          <footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, Alpha Team.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/favicon.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../../index.html">AlphaTeam</a></h1>
 
-</body>
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Alpha Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
 </html>

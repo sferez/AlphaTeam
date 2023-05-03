@@ -1,149 +1,601 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>src package &mdash; AlphaTeam 0.0.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/js/theme.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>src package &#8212; AlphaTeam 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
-</head>
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  </head><body>
+  
 
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
           
-          
-          <a href="index.html" class="icon icon-home">
-            AlphaTeam
-              <img src="_static/favicon.png" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">src package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-src.JS_scripts">src.JS_scripts module</a></li>
-<li><a class="reference internal" href="#src-networkgraphs-module">src.NetworkGraphs module</a></li>
-<li><a class="reference internal" href="#module-src.deepLearning">src.deepLearning module</a><ul>
-<li><a class="reference internal" href="#src.deepLearning.get_DL_embedding"><code class="docutils literal notranslate"><span class="pre">get_DL_embedding()</span></code></a></li>
-<li><a class="reference internal" href="#src.deepLearning.get_model"><code class="docutils literal notranslate"><span class="pre">get_model()</span></code></a></li>
-<li><a class="reference internal" href="#src.deepLearning.get_similar_nodes"><code class="docutils literal notranslate"><span class="pre">get_similar_nodes()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-src.machineLearning">src.machineLearning module</a><ul>
-<li><a class="reference internal" href="#src.machineLearning.clustering_response"><code class="docutils literal notranslate"><span class="pre">clustering_response()</span></code></a></li>
-<li><a class="reference internal" href="#src.machineLearning.create_comm_colors"><code class="docutils literal notranslate"><span class="pre">create_comm_colors()</span></code></a></li>
-<li><a class="reference internal" href="#src.machineLearning.create_comm_dataframe"><code class="docutils literal notranslate"><span class="pre">create_comm_dataframe()</span></code></a></li>
-<li><a class="reference internal" href="#src.machineLearning.get_communities"><code class="docutils literal notranslate"><span class="pre">get_communities()</span></code></a></li>
-<li><a class="reference internal" href="#src.machineLearning.get_hotspot"><code class="docutils literal notranslate"><span class="pre">get_hotspot()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-src.metrics">src.metrics module</a><ul>
-<li><a class="reference internal" href="#src.metrics.get_metrics"><code class="docutils literal notranslate"><span class="pre">get_metrics()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-src.preprocessing">src.preprocessing module</a><ul>
-<li><a class="reference internal" href="#src.preprocessing.convert_to_DiGraph"><code class="docutils literal notranslate"><span class="pre">convert_to_DiGraph()</span></code></a></li>
-<li><a class="reference internal" href="#src.preprocessing.convert_to_undirected"><code class="docutils literal notranslate"><span class="pre">convert_to_undirected()</span></code></a></li>
-<li><a class="reference internal" href="#src.preprocessing.create_multi_DiGraph_railway"><code class="docutils literal notranslate"><span class="pre">create_multi_DiGraph_railway()</span></code></a></li>
-<li><a class="reference internal" href="#src.preprocessing.preprocess_crypto"><code class="docutils literal notranslate"><span class="pre">preprocess_crypto()</span></code></a></li>
-<li><a class="reference internal" href="#src.preprocessing.preprocess_custom"><code class="docutils literal notranslate"><span class="pre">preprocess_custom()</span></code></a></li>
-<li><a class="reference internal" href="#src.preprocessing.preprocess_gtfs"><code class="docutils literal notranslate"><span class="pre">preprocess_gtfs()</span></code></a></li>
-<li><a class="reference internal" href="#src.preprocessing.preprocess_mtx"><code class="docutils literal notranslate"><span class="pre">preprocess_mtx()</span></code></a></li>
-<li><a class="reference internal" href="#src.preprocessing.preprocess_railway"><code class="docutils literal notranslate"><span class="pre">preprocess_railway()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#src-resilience-module">src.resilience module</a></li>
-<li><a class="reference internal" href="#module-src.stochastic">src.stochastic module</a><ul>
-<li><a class="reference internal" href="#src.stochastic.estimate_clustering_coefficient"><code class="docutils literal notranslate"><span class="pre">estimate_clustering_coefficient()</span></code></a></li>
-<li><a class="reference internal" href="#src.stochastic.estimate_shortest_path_length"><code class="docutils literal notranslate"><span class="pre">estimate_shortest_path_length()</span></code></a></li>
-<li><a class="reference internal" href="#src.stochastic.get_random_node"><code class="docutils literal notranslate"><span class="pre">get_random_node()</span></code></a></li>
-<li><a class="reference internal" href="#src.stochastic.get_random_sample"><code class="docutils literal notranslate"><span class="pre">get_random_sample()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-src.utils">src.utils module</a><ul>
-<li><a class="reference internal" href="#src.utils.clean_df"><code class="docutils literal notranslate"><span class="pre">clean_df()</span></code></a></li>
-<li><a class="reference internal" href="#src.utils.delete_networkGraph"><code class="docutils literal notranslate"><span class="pre">delete_networkGraph()</span></code></a></li>
-<li><a class="reference internal" href="#src.utils.get_networkGraph"><code class="docutils literal notranslate"><span class="pre">get_networkGraph()</span></code></a></li>
-<li><a class="reference internal" href="#src.utils.is_saved"><code class="docutils literal notranslate"><span class="pre">is_saved()</span></code></a></li>
-<li><a class="reference internal" href="#src.utils.memoize"><code class="docutils literal notranslate"><span class="pre">memoize()</span></code></a></li>
-<li><a class="reference internal" href="#src.utils.return_nan"><code class="docutils literal notranslate"><span class="pre">return_nan()</span></code></a></li>
-<li><a class="reference internal" href="#src.utils.set_networkGraph"><code class="docutils literal notranslate"><span class="pre">set_networkGraph()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#src-visualisation-module">src.visualisation module</a></li>
-<li><a class="reference internal" href="#module-src">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
-        </div>
-      </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">AlphaTeam</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">src package</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/src.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+          <div class="body" role="main">
+            
   <section id="src-package">
-<h1>src package<a class="headerlink" href="#src-package" title="Permalink to this heading"></a></h1>
+<h1>src package<a class="headerlink" href="#src-package" title="Permalink to this heading">¶</a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
 </section>
 <section id="module-src.JS_scripts">
-<span id="src-js-scripts-module"></span><h2>src.JS_scripts module<a class="headerlink" href="#module-src.JS_scripts" title="Permalink to this heading"></a></h2>
+<span id="src-js-scripts-module"></span><h2>src.JS_scripts module<a class="headerlink" href="#module-src.JS_scripts" title="Permalink to this heading">¶</a></h2>
 <p>Author: Alpha Team Group Project
 Date: March 2023
 Purpose: JS_scripts module contains script to insert into the plotly graph for dynamic functionality</p>
 </section>
-<section id="src-networkgraphs-module">
-<h2>src.NetworkGraphs module<a class="headerlink" href="#src-networkgraphs-module" title="Permalink to this heading"></a></h2>
+<section id="module-src.NetworkGraphs">
+<span id="src-networkgraphs-module"></span><h2>src.NetworkGraphs module<a class="headerlink" href="#module-src.NetworkGraphs" title="Permalink to this heading">¶</a></h2>
+<p>Author: Alpha Team Group Project
+Date: March 2023
+Purpose: NetworkGraphs.py contains the NetworkGraphs custom class to generalise complex network analysis</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.NetworkGraphs.</span></span><span class="sig-name descname"><span class="pre">NetworkGraphs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attack_vector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class containing the NetworkX graphs wrapping functionalities to generalise the use of the MultiDiGraph,
+MultiGraph, DiGraph and Graph. This class store attributes of the graphs to allow effective use of the graphs.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.clean_dataset">
+<span class="sig-name descname"><span class="pre">clean_dataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.clean_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.clean_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Clean the dataframe by formatting the columns values and rounding the float values for display</p>
+</dd>
+</dl>
+<p>purpose
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_attack_vector">
+<span class="sig-name descname"><span class="pre">get_attack_vector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_attack_vector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_attack_vector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_colors">
+<span class="sig-name descname"><span class="pre">get_colors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_colors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_colors" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the colors of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the colors of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_df">
+<span class="sig-name descname"><span class="pre">get_df</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_df" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the dataframe of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the dataframe of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_end">
+<span class="sig-name descname"><span class="pre">get_end</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_end"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_end" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the end of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the end of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_graph">
+<span class="sig-name descname"><span class="pre">get_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_graph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the graph of the specified type</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Graph type can be:</dt><dd><ul class="simple">
+<li><p>‘DiGraph’</p></li>
+<li><p>‘MultiDiGraph’</p></li>
+<li><p>‘Graph’</p></li>
+<li><p>‘MultiGraph’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>graph_type</strong> (<em>str</em>) – the type of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the graph of the specified type</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkx.DiGraph or networkx.MultiDiGraph or networkx.Graph or networkx.MultiGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_max_lat">
+<span class="sig-name descname"><span class="pre">get_max_lat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_max_lat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_max_lat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the maximum latitude of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the maximum latitude of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_max_long">
+<span class="sig-name descname"><span class="pre">get_max_long</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_max_long"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_max_long" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the maximum longitude of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the maximum longitude of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_min_lat">
+<span class="sig-name descname"><span class="pre">get_min_lat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_min_lat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_min_lat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the minimum latitude of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the minimum latitude of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_min_long">
+<span class="sig-name descname"><span class="pre">get_min_long</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_min_long"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_min_long" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the minimum longitude of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the minimum longitude of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the name of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the name of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_pos">
+<span class="sig-name descname"><span class="pre">get_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_pos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_pos" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the position of the nodes</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the position of the nodes</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_start">
+<span class="sig-name descname"><span class="pre">get_start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_start" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the start of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the start of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_type">
+<span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_type" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the type of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the type of the graph</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.get_weights">
+<span class="sig-name descname"><span class="pre">get_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.get_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.get_weights" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the weights of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>graph_type</strong> (<em>str</em>) – the type of the graph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the weights of the graph</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.is_spatial">
+<span class="sig-name descname"><span class="pre">is_spatial</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.is_spatial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.is_spatial" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return True if the graph is spatial, False otherwise</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the graph is spatial, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.is_temporal">
+<span class="sig-name descname"><span class="pre">is_temporal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.is_temporal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.is_temporal" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return True if the graph is temporal, False otherwise</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the graph is temporal, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.is_weighted">
+<span class="sig-name descname"><span class="pre">is_weighted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.is_weighted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.is_weighted" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return True if the graph is weighted, False otherwise</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the graph is weighted, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_attack_vector">
+<span class="sig-name descname"><span class="pre">set_attack_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attack_vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_attack_vector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_attack_vector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_filename">
+<span class="sig-name descname"><span class="pre">set_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_filename"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_filename" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the filename of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>filename</strong> (<em>str</em>) – the filename of the graph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_max_lat">
+<span class="sig-name descname"><span class="pre">set_max_lat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_lat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_max_lat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_max_lat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the maximum latitude of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>max_lat</strong> (<em>float</em>) – the maximum latitude of the graph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_max_long">
+<span class="sig-name descname"><span class="pre">set_max_long</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_long</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_max_long"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_max_long" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the maximum longitude of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>max_long</strong> (<em>float</em>) – the maximum longitude of the graph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_mid_lat">
+<span class="sig-name descname"><span class="pre">set_mid_lat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_mid_lat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_mid_lat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the middle latitude of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_mid_long">
+<span class="sig-name descname"><span class="pre">set_mid_long</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_mid_long"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_mid_long" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the middle longitude of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_min_lat">
+<span class="sig-name descname"><span class="pre">set_min_lat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_lat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_min_lat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_min_lat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the minimum latitude of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>min_lat</strong> (<em>float</em>) – the minimum latitude of the graph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_min_long">
+<span class="sig-name descname"><span class="pre">set_min_long</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_long</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_min_long"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_min_long" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the minimum longitude of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>min_long</strong> (<em>float</em>) – the minimum longitude of the graph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_name">
+<span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the name of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>name</strong> – the name of the graph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_session_folder">
+<span class="sig-name descname"><span class="pre">set_session_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_folder</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_session_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_session_folder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the session folder of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>session_folder</strong> (<em>str</em>) – the session folder of the graph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_spatial">
+<span class="sig-name descname"><span class="pre">set_spatial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spatial</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_spatial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_spatial" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the spatial attribute of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>spatial</strong> (<em>bool</em>) – True if the graph is spatial, False otherwise</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_temporal">
+<span class="sig-name descname"><span class="pre">set_temporal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temporal</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_temporal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_temporal" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the temporal attribute of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>temporal</strong> (<em>bool</em>) – True if the graph is temporal, False otherwise</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_type">
+<span class="sig-name descname"><span class="pre">set_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_type" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the type of the graph</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Data type can be</dt><dd><ul class="simple">
+<li><p>‘RAILWAY’</p></li>
+<li><p>‘CRYPTO’</p></li>
+<li><p>‘CUSTOM’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_type</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.set_weighted">
+<span class="sig-name descname"><span class="pre">set_weighted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weighted</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.set_weighted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.set_weighted" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the weighted attribute of the graph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>weighted</strong> (<em>bool</em>) – True if the graph is weighted, False otherwise</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.standardize_weights">
+<span class="sig-name descname"><span class="pre">standardize_weights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.standardize_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.standardize_weights" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Standardize the weights of the graph between 0 and 1</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.NetworkGraphs.NetworkGraphs.update_attributes">
+<span class="sig-name descname"><span class="pre">update_attributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/NetworkGraphs.html#NetworkGraphs.update_attributes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.NetworkGraphs.NetworkGraphs.update_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Update the attributes of the graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-src.deepLearning">
-<span id="src-deeplearning-module"></span><h2>src.deepLearning module<a class="headerlink" href="#module-src.deepLearning" title="Permalink to this heading"></a></h2>
+<span id="src-deeplearning-module"></span><h2>src.deepLearning module<a class="headerlink" href="#module-src.deepLearning" title="Permalink to this heading">¶</a></h2>
 <p>Author: Alpha Team Group Project
 Date: March 2023
 Purpose: Deep learning module contains functions for deep learning embeddings</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.deepLearning.get_DL_embedding">
-<span class="sig-prename descclassname"><span class="pre">src.deepLearning.</span></span><span class="sig-name descname"><span class="pre">get_DL_embedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/deepLearning.html#get_DL_embedding"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.deepLearning.get_DL_embedding" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.deepLearning.</span></span><span class="sig-name descname"><span class="pre">get_DL_embedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/deepLearning.html#get_DL_embedding"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.deepLearning.get_DL_embedding" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get deep learning embedding</p>
@@ -167,7 +619,7 @@ Purpose: Deep learning module contains functions for deep learning embeddings</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.deepLearning.get_model">
-<span class="sig-prename descclassname"><span class="pre">src.deepLearning.</span></span><span class="sig-name descname"><span class="pre">get_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embed_dim</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/deepLearning.html#get_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.deepLearning.get_model" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.deepLearning.</span></span><span class="sig-name descname"><span class="pre">get_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embed_dim</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/deepLearning.html#get_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.deepLearning.get_model" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get deep learning model</p>
@@ -191,7 +643,7 @@ Purpose: Deep learning module contains functions for deep learning embeddings</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.deepLearning.get_similar_nodes">
-<span class="sig-prename descclassname"><span class="pre">src.deepLearning.</span></span><span class="sig-name descname"><span class="pre">get_similar_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/deepLearning.html#get_similar_nodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.deepLearning.get_similar_nodes" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.deepLearning.</span></span><span class="sig-name descname"><span class="pre">get_similar_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/deepLearning.html#get_similar_nodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.deepLearning.get_similar_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get similar nodes to a given node using Node2Vec embedding model</p>
@@ -215,20 +667,20 @@ Purpose: Deep learning module contains functions for deep learning embeddings</p
 
 </section>
 <section id="module-src.machineLearning">
-<span id="src-machinelearning-module"></span><h2>src.machineLearning module<a class="headerlink" href="#module-src.machineLearning" title="Permalink to this heading"></a></h2>
+<span id="src-machinelearning-module"></span><h2>src.machineLearning module<a class="headerlink" href="#module-src.machineLearning" title="Permalink to this heading">¶</a></h2>
 <p>Author: Alpha Team Group Project
 Date: March 2023
 Purpose: Machine Learning for the NetworkX graphs analysis</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.machineLearning.clustering_response">
-<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">clustering_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering_alg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimal_k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#clustering_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.clustering_response" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">clustering_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering_alg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimal_k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#clustering_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.clustering_response" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Create a dataframe with the Node, communities ID and their colors</p>
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>networkGraph</strong> (<em>NetworkGraphs</em>) – NetworkGraphs</p></li>
+<li><p><strong>networkGraph</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs</p></li>
 <li><p><strong>clustering_alg</strong> (<em>KMeans</em>) – clustering algorithm</p></li>
 <li><p><strong>optimal_k</strong> (<em>int</em>) – optimal number of clusters</p></li>
 </ul>
@@ -244,7 +696,7 @@ Purpose: Machine Learning for the NetworkX graphs analysis</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.machineLearning.create_comm_colors">
-<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">create_comm_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">communities</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#create_comm_colors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.create_comm_colors" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">create_comm_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">communities</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#create_comm_colors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.create_comm_colors" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Create a list of colors for the communities</p>
@@ -263,7 +715,7 @@ Purpose: Machine Learning for the NetworkX graphs analysis</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.machineLearning.create_comm_dataframe">
-<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">create_comm_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">communities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#create_comm_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.create_comm_dataframe" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">create_comm_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">communities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#create_comm_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.create_comm_dataframe" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Create a dataframe with the Node, communities ID and their colors</p>
@@ -285,14 +737,14 @@ Purpose: Machine Learning for the NetworkX graphs analysis</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.machineLearning.get_communities">
-<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">get_communities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noOfClusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#get_communities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.get_communities" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">get_communities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noOfClusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#get_communities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.get_communities" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get communities based on the method</p>
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>networkGraphs</strong> (<em>NetworkGraphs</em>) – NetworkGraphs</p></li>
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs</p></li>
 <li><p><strong>method</strong> (<em>str</em>) – method to use</p></li>
 <li><p><strong>noOfClusters</strong> (<em>int</em>) – size of the cluster</p></li>
 <li><p><strong>embedding</strong> (<em>np.array</em>) – embedding</p></li>
@@ -306,13 +758,13 @@ Purpose: Machine Learning for the NetworkX graphs analysis</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.machineLearning.get_hotspot">
-<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">get_hotspot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#get_hotspot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.get_hotspot" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.machineLearning.</span></span><span class="sig-name descname"><span class="pre">get_hotspot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/machineLearning.html#get_hotspot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.machineLearning.get_hotspot" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get hotspot</p>
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>networkGraphs</strong> (<em>NetworkGraphs</em>) – </p>
+<dd class="field-even"><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – </p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dataframe</p>
@@ -325,13 +777,13 @@ Purpose: Machine Learning for the NetworkX graphs analysis</p>
 
 </section>
 <section id="module-src.metrics">
-<span id="src-metrics-module"></span><h2>src.metrics module<a class="headerlink" href="#module-src.metrics" title="Permalink to this heading"></a></h2>
+<span id="src-metrics-module"></span><h2>src.metrics module<a class="headerlink" href="#module-src.metrics" title="Permalink to this heading">¶</a></h2>
 <p>Author: Alpha Team Group Project
 Date: March 2023
 Purpose: Compute the metrics for the network graphs</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.metrics.get_metrics">
-<span class="sig-prename descclassname"><span class="pre">src.metrics.</span></span><span class="sig-name descname"><span class="pre">get_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/metrics.html#get_metrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.metrics.get_metrics" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.metrics.</span></span><span class="sig-name descname"><span class="pre">get_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/metrics.html#get_metrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.metrics.get_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get the metrics for the given graph
@@ -348,7 +800,7 @@ Method:
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>networkGraphs</strong> (<em>NetworkGraphs</em>) – Network graphs</p></li>
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – Network graphs</p></li>
 <li><p><strong>method</strong> (<em>str</em>) – Method to compute the metrics</p></li>
 <li><p><strong>directed</strong> (<em>bool</em>) – Compute the metrics for the directed graph</p></li>
 <li><p><strong>multi</strong> (<em>bool</em>) – Compute the metrics for the multi graph</p></li>
@@ -365,7 +817,7 @@ Method:
 
 </section>
 <section id="module-src.preprocessing">
-<span id="src-preprocessing-module"></span><h2>src.preprocessing module<a class="headerlink" href="#module-src.preprocessing" title="Permalink to this heading"></a></h2>
+<span id="src-preprocessing-module"></span><h2>src.preprocessing module<a class="headerlink" href="#module-src.preprocessing" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Author<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Alpha Team Group Project</p>
@@ -379,7 +831,7 @@ Method:
 </dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.preprocessing.convert_to_DiGraph">
-<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">convert_to_DiGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multi_graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#convert_to_DiGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.convert_to_DiGraph" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">convert_to_DiGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multi_graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#convert_to_DiGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.convert_to_DiGraph" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Create a DiGraph from a MultiDiGraph with the same nodes and edges containing the sum of the weights,</p>
@@ -401,7 +853,7 @@ Method:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.preprocessing.convert_to_undirected">
-<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">convert_to_undirected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g_directed</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#convert_to_undirected"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.convert_to_undirected" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">convert_to_undirected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g_directed</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#convert_to_undirected"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.convert_to_undirected" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Convert a DiGraph to an undirected graph using NetworkX to_undirected() function</p>
@@ -420,7 +872,7 @@ Method:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.preprocessing.create_multi_DiGraph_railway">
-<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">create_multi_DiGraph_railway</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#create_multi_DiGraph_railway"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.create_multi_DiGraph_railway" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">create_multi_DiGraph_railway</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#create_multi_DiGraph_railway"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.create_multi_DiGraph_railway" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Create a MultiDiGraph from the railway dataset JSON object</p>
@@ -442,7 +894,7 @@ Method:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.preprocessing.preprocess_crypto">
-<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_crypto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_crypto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_crypto" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_crypto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_crypto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_crypto" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Preprocess the crypto dataset and return a NetworkX DiGraph and MultiDiGraph</p>
@@ -461,7 +913,7 @@ Method:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.preprocessing.preprocess_custom">
-<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_custom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_custom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_custom" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_custom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_custom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_custom" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Preprocess the custom dataset and return a NetworkX DiGraph and MultiDiGraph</p>
@@ -500,7 +952,7 @@ Method:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.preprocessing.preprocess_gtfs">
-<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_gtfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zip_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_gtfs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_gtfs" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_gtfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zip_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_gtfs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_gtfs" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Preprocess the gtfs dataset and return a NetworkX DiGraph and MultiDiGraph</p>
@@ -519,7 +971,7 @@ Method:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.preprocessing.preprocess_mtx">
-<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_mtx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_mtx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_mtx" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_mtx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_mtx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_mtx" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Preprocess the mtx dataset and return a NetworkX DiGraph and MultiDiGraph</p>
@@ -538,7 +990,7 @@ Method:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.preprocessing.preprocess_railway">
-<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_railway</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_railway"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_railway" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocess_railway</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/preprocessing.html#preprocess_railway"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.preprocessing.preprocess_railway" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Preprocess the railway dataset and create NetworkX graphs</p>
@@ -556,24 +1008,340 @@ Method:
 </dd></dl>
 
 </section>
-<section id="src-resilience-module">
-<h2>src.resilience module<a class="headerlink" href="#src-resilience-module" title="Permalink to this heading"></a></h2>
+<section id="module-src.resilience">
+<span id="src-resilience-module"></span><h2>src.resilience module<a class="headerlink" href="#module-src.resilience" title="Permalink to this heading">¶</a></h2>
+<p>Author: Alpha Team Group Project
+Date: March 2023
+Purpose: Assess the resilience of a network using different attacks vectors</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.copy_networkGraph">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">copy_networkGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#copy_networkGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.copy_networkGraph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Copy the networkGraph object</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>networkGraph</strong> (<em>NetworkGraph</em>) – NetworkGraph</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Copy of the networkGraph</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NetworkGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.execute_threshold">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">execute_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&gt;'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#execute_threshold"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.execute_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Execute the threshold operation</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>df</strong> (<em>DataFrame</em>) – DataFrame with the metrics</p></li>
+<li><p><strong>metric</strong> (<em>str</em>) – Metric to be used to select the nodes to be removed</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Threshold to be used to select the nodes to be removed</p></li>
+<li><p><strong>operator</strong> (<em>str</em>) – Operator to be used to select the nodes to be removed</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DataFrame with the nodes to be removed</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.remove_edges">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">remove_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#remove_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.remove_edges" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Remove the edges from the networkGraph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>networkGraph</strong> (<em>NetworkGraph</em>) – NetworkGraph</p></li>
+<li><p><strong>edges</strong> (<em>list</em>) – Edges to be removed</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NetworkGraph with the edges removed</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NetworkGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.remove_nodes">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">remove_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#remove_nodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.remove_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Remove the nodes from the networkGraph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>networkGraph</strong> (<em>NetworkGraph</em>) – NetworkGraph</p></li>
+<li><p><strong>nodes</strong> (<em>list</em>) – Nodes to be removed</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NetworkGraph with the nodes removed</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NetworkGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.resilience">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">resilience</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attack</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#resilience"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.resilience" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Compute the resilience of the networkGraph</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Attack can be:</dt><dd><ul class="simple">
+<li><p>“random”</p></li>
+<li><p>“malicious”</p></li>
+<li><p>“cluster”</p></li>
+<li><p>“random”</p></li>
+</ul>
+</dd>
+<dt>Args of the attacks:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>“random”:</dt><dd><ul>
+<li><p>“number_of_nodes”: Number of nodes to be removed</p></li>
+<li><p>“number_of_edges”: Number of edges to be removed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“malicious”:</dt><dd><ul>
+<li><dl class="simple">
+<dt>“metric”: Metric to be used to select the nodes to be removed</dt><dd><ul>
+<li><p>‘kcore’</p></li>
+<li><p>‘degree’</p></li>
+<li><p>‘triangles’</p></li>
+<li><p>‘pagerank’</p></li>
+<li><p>‘betweenness_centrality’</p></li>
+<li><p>‘closeness_centrality’</p></li>
+<li><p>‘eigenvector_centrality’</p></li>
+<li><p>‘load_centrality’</p></li>
+<li><p>‘degree_centrality’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>‘directed’: True or False</p></li>
+<li><p>‘multi’: True or False</p></li>
+<li><p>“number_of_nodes”: Number of nodes to be removed</p></li>
+<li><p>“threshold”: Threshold to be used to select the nodes to be removed</p></li>
+<li><dl class="simple">
+<dt>“operator” can be:</dt><dd><ul>
+<li><p>“&gt;”</p></li>
+<li><p>“&lt;”</p></li>
+<li><p>“&gt;=”</p></li>
+<li><p>“&lt;=”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“cluster”:</dt><dd><ul>
+<li><p>“cluster_algorithm”: Algorithm to be used to compute the clusters</p></li>
+<li><p>“total_clusters”: Total number of clusters to be generated</p></li>
+<li><p>“number_of_clusters”: Number of clusters to be removed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“custom”:</dt><dd><ul>
+<li><p>“list_of_nodes”: List of nodes to be removed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraph</strong> (<em>NetworkGraph</em>) – NetworkGraph</p></li>
+<li><p><strong>attack</strong> (<em>str</em>) – Attack to be performed</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – Arguments of the attack to be performed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>NetworkGraph with the nodes removed, and a dataframe with the changed nodes/edges</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NetworkGraph, pd.DataFrame</p>
+</dd>
+</dl>
+<p>Example:
+&gt;&gt;&gt; # Random attack
+&gt;&gt;&gt; graph, df = resilience(networkGraph, attack=’random’, number_of_nodes=10)
+&gt;&gt;&gt; graph, df = resilience(networkGraph, attack=’random’, number_of_edges=10)
+&gt;&gt;&gt; # Malicious attack
+&gt;&gt;&gt; graph, df = resilience(networkGraph, attack=’malicious’, metric=’degree’, number_of_nodes=10)
+&gt;&gt;&gt; graph, df = resilience(networkGraph, attack=’malicious’, metric=’degree’, threshold=10, operator=’&gt;’)
+&gt;&gt;&gt; # Cluster attack
+&gt;&gt;&gt; graph, df = resilience(networkGraph, attack=’cluster’, cluster_algorithm=’spectral’, total_clusters=15, number_of_clusters=2)
+&gt;&gt;&gt; # Custom attack
+&gt;&gt;&gt; graph, df = resilience(networkGraph, attack=’custom’, list_of_nodes=[1, 2, 3])</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.resilience_cluster">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">resilience_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_clusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_clusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#resilience_cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.resilience_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generate the cluster attack to the networkGraph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>networkGraph</strong> (<em>NetworkGraph</em>) – NetworkGraph</p></li>
+<li><p><strong>cluster_algorithm</strong> (<em>str</em>) – Algorithm to be used to compute the clusters</p></li>
+<li><p><strong>total_clusters</strong> (<em>int</em>) – Total number of clusters to be generated</p></li>
+<li><p><strong>number_of_clusters</strong> (<em>int</em>) – Number of clusters to be removed</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NetworkGraph with the nodes removed</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NetworkGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.resilience_custom">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">resilience_custom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_of_nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#resilience_custom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.resilience_custom" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generate the custom attack to the networkGraph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>networkGraph</strong> (<em>NetworkGraph</em>) – NetworkGraph</p></li>
+<li><p><strong>list_of_nodes</strong> (<em>list</em>) – List of nodes to be removed</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NetworkGraph with the nodes removed</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NetworkGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.resilience_malicious">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">resilience_malicious</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#resilience_malicious"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.resilience_malicious" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generate the malicious attack to the networkGraph</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Metrics:</dt><dd><ul class="simple">
+<li><p>‘kcore’</p></li>
+<li><p>‘degree’</p></li>
+<li><p>‘triangles’</p></li>
+<li><p>‘pagerank’</p></li>
+<li><p>‘betweenness_centrality’</p></li>
+<li><p>‘closeness_centrality’</p></li>
+<li><p>‘eigenvector_centrality’</p></li>
+<li><p>‘load_centrality’</p></li>
+<li><p>‘degree_centrality’</p></li>
+</ul>
+</dd>
+<dt>operators:</dt><dd><ul class="simple">
+<li><p>“&gt;” (default)</p></li>
+<li><p>“&lt;”</p></li>
+<li><p>“&gt;=”</p></li>
+<li><p>“&lt;=”</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraph</strong> (<em>NetworkGraph</em>) – NetworkGraph</p></li>
+<li><p><strong>metric</strong> (<em>str</em>) – Metric to be used to select the nodes to be removed</p></li>
+<li><p><strong>number_of_nodes</strong> (<em>int</em>) – Number of nodes to be removed</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Threshold to be used to select the nodes to be removed</p></li>
+<li><p><strong>operator</strong> (<em>str</em>) – Operator to be used to select the nodes to be removed</p></li>
+<li><p><strong>multi</strong> (<em>bool</em>) – True if the graph is multi</p></li>
+<li><p><strong>directed</strong> (<em>bool</em>) – True if the graph is directed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>NetworkGraph with the nodes removed</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NetworkGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.resilience.resilience_random">
+<span class="sig-prename descclassname"><span class="pre">src.resilience.</span></span><span class="sig-name descname"><span class="pre">resilience_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/resilience.html#resilience_random"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.resilience.resilience_random" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generate the random attack to the networkGraph</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>networkGraph</strong> (<em>NetworkGraph</em>) – NetworkGraph</p></li>
+<li><p><strong>number_of_nodes</strong> (<em>int</em>) – Number of nodes to be removed</p></li>
+<li><p><strong>number_of_edges</strong> (<em>int</em>) – Number of edges to be removed</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NetworkGraph with the nodes removed</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NetworkGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="module-src.stochastic">
-<span id="src-stochastic-module"></span><h2>src.stochastic module<a class="headerlink" href="#module-src.stochastic" title="Permalink to this heading"></a></h2>
+<span id="src-stochastic-module"></span><h2>src.stochastic module<a class="headerlink" href="#module-src.stochastic" title="Permalink to this heading">¶</a></h2>
 <p>Author: Alpha Team Group Project
 Date: March 2023
 Purpose: Stochastic approximation algorithms for estimating graph properties Leveraging sampling techniques to improve computational efficiency</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.stochastic.estimate_clustering_coefficient">
-<span class="sig-prename descclassname"><span class="pre">src.stochastic.</span></span><span class="sig-name descname"><span class="pre">estimate_clustering_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/stochastic.html#estimate_clustering_coefficient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.stochastic.estimate_clustering_coefficient" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.stochastic.</span></span><span class="sig-name descname"><span class="pre">estimate_clustering_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/stochastic.html#estimate_clustering_coefficient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.stochastic.estimate_clustering_coefficient" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Estimate clustering coefficient over a iterations number of samples</p>
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkx.classes.graph.Graph</em>) – Graph</p></li>
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>src.NetworkGraphs.NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
 <li><p><strong>iterations</strong> (<em>int</em>) – Number of samples</p></li>
 </ul>
 </dd>
@@ -588,14 +1356,14 @@ Purpose: Stochastic approximation algorithms for estimating graph properties Lev
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.stochastic.estimate_shortest_path_length">
-<span class="sig-prename descclassname"><span class="pre">src.stochastic.</span></span><span class="sig-name descname"><span class="pre">estimate_shortest_path_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/stochastic.html#estimate_shortest_path_length"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.stochastic.estimate_shortest_path_length" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.stochastic.</span></span><span class="sig-name descname"><span class="pre">estimate_shortest_path_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/stochastic.html#estimate_shortest_path_length"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.stochastic.estimate_shortest_path_length" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Estimate shortest path length between over a iterations number of samples</p>
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkx.classes.graph.Graph</em>) – Graph</p></li>
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>src.NetworkGraphs.NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
 <li><p><strong>iterations</strong> (<em>int</em>) – Number of samples</p></li>
 </ul>
 </dd>
@@ -610,7 +1378,7 @@ Purpose: Stochastic approximation algorithms for estimating graph properties Lev
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.stochastic.get_random_node">
-<span class="sig-prename descclassname"><span class="pre">src.stochastic.</span></span><span class="sig-name descname"><span class="pre">get_random_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/stochastic.html#get_random_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.stochastic.get_random_node" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.stochastic.</span></span><span class="sig-name descname"><span class="pre">get_random_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/stochastic.html#get_random_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.stochastic.get_random_node" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get random node from nodes</p>
@@ -629,7 +1397,7 @@ Purpose: Stochastic approximation algorithms for estimating graph properties Lev
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.stochastic.get_random_sample">
-<span class="sig-prename descclassname"><span class="pre">src.stochastic.</span></span><span class="sig-name descname"><span class="pre">get_random_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/stochastic.html#get_random_sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.stochastic.get_random_sample" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.stochastic.</span></span><span class="sig-name descname"><span class="pre">get_random_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/stochastic.html#get_random_sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.stochastic.get_random_sample" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get random sample of 2 nodes from nodes</p>
@@ -648,13 +1416,13 @@ Purpose: Stochastic approximation algorithms for estimating graph properties Lev
 
 </section>
 <section id="module-src.utils">
-<span id="src-utils-module"></span><h2>src.utils module<a class="headerlink" href="#module-src.utils" title="Permalink to this heading"></a></h2>
+<span id="src-utils-module"></span><h2>src.utils module<a class="headerlink" href="#module-src.utils" title="Permalink to this heading">¶</a></h2>
 <p>Author: Alpha Team Group Project
 Date: March 2023
 Purpose: utils.py contains utilities functions for the project</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.utils.clean_df">
-<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">clean_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#clean_df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.clean_df" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">clean_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#clean_df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.clean_df" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Clean the dataframe by rounding the values to 6 decimals and shortening the strings to 12 characters</p>
@@ -673,7 +1441,7 @@ Purpose: utils.py contains utilities functions for the project</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.utils.delete_networkGraph">
-<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">delete_networkGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#delete_networkGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.delete_networkGraph" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">delete_networkGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#delete_networkGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.delete_networkGraph" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Delete the network graph from the cache</p>
@@ -689,7 +1457,7 @@ Purpose: utils.py contains utilities functions for the project</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.utils.get_networkGraph">
-<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">get_networkGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#get_networkGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.get_networkGraph" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">get_networkGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#get_networkGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.get_networkGraph" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Get the network graph from the cache</p>
@@ -708,7 +1476,7 @@ Purpose: utils.py contains utilities functions for the project</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.utils.is_saved">
-<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">is_saved</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#is_saved"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.is_saved" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">is_saved</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#is_saved"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.is_saved" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Check if the network graph is saved in the cache</p>
@@ -727,7 +1495,7 @@ Purpose: utils.py contains utilities functions for the project</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.utils.memoize">
-<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">memoize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#memoize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.memoize" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">memoize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#memoize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.memoize" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Memoize the function to avoid recomputing the same value, leverage the cache</p>
@@ -746,14 +1514,14 @@ Purpose: utils.py contains utilities functions for the project</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.utils.return_nan">
-<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">return_nan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#return_nan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.return_nan" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">return_nan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#return_nan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.return_nan" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Return a dataframe with NaN values for the given metric</p>
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>networkGraphs</strong> (<em>NetworkGraphs</em>) – NetworkGraphs object</p></li>
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
 <li><p><strong>column</strong> (<em>str</em>) – Column name</p></li>
 </ul>
 </dd>
@@ -768,7 +1536,7 @@ Purpose: utils.py contains utilities functions for the project</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.utils.set_networkGraph">
-<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">set_networkGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#set_networkGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.set_networkGraph" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">set_networkGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils.html#set_networkGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.set_networkGraph" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Function<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Set the network graph in the cache</p>
@@ -783,40 +1551,650 @@ Purpose: utils.py contains utilities functions for the project</p>
 </dd></dl>
 
 </section>
-<section id="src-visualisation-module">
-<h2>src.visualisation module<a class="headerlink" href="#src-visualisation-module" title="Permalink to this heading"></a></h2>
+<section id="module-src.visualisation">
+<span id="src-visualisation-module"></span><h2>src.visualisation module<a class="headerlink" href="#module-src.visualisation" title="Permalink to this heading">¶</a></h2>
+<p>Author: Alpha Team Group Project
+Date: May 2023
+Purpose: Main visualisation file wrapping sub-visualisation functionalities</p>
+<blockquote>
+<div><p>this file is used to generate the API calls by the user</p>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_DL_embedding">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_DL_embedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['proximity']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'SAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TSNE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_DL_embedding"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_DL_embedding" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the DL embedding for the given network</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>features:</dt><dd><p>Format: [‘feature1’, ‘feature2’, …]
+If choose proximity just put [‘proximity’] without any other features
+- ‘proximity’
+- ‘kcore’
+- ‘triangles’
+- ‘degree’
+- ‘pagerank’
+- ‘degree_centrality’
+- ‘closeness_centrality’
+- ‘betweenness_centrality’
+- ‘eigenvector_centrality’
+- ‘load_centrality’</p>
+</dd>
+<dt>layout:</dt><dd><ul class="simple">
+<li><p>‘TSNE’</p></li>
+<li><p>‘UMAP’</p></li>
+<li><p>‘PCA’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
+<li><p><strong>features</strong> (<em>list</em>) – Feature list</p></li>
+<li><p><strong>dimension</strong> (<em>int</em>) – Dimension of the embedding</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – GNN model</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Visualisation method</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame, filename</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_DL_embedding_cluster">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_DL_embedding_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noOfCluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['proximity']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'SAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TSNE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_DL_embedding_cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_DL_embedding_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the DL embeddings with clusters on top for the given network</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>method:</dt><dd><ul class="simple">
+<li><p>‘kmeans’</p></li>
+<li><p>‘spectral’</p></li>
+<li><p>‘agglomerative’</p></li>
+<li><p>‘dbscan’</p></li>
+</ul>
+</dd>
+<dt>features:</dt><dd><p>Format: [‘feature1’, ‘feature2’, …]
+If choose proximity just put [‘proximity’] without any other features
+- ‘proximity’
+- ‘kcore’
+- ‘triangles’
+- ‘degree’
+- ‘pagerank’
+- ‘degree_centrality’
+- ‘closeness_centrality’
+- ‘betweenness_centrality’
+- ‘eigenvector_centrality’
+- ‘load_centrality’</p>
+</dd>
+<dt>layout:</dt><dd><ul class="simple">
+<li><p>‘TSNE’</p></li>
+<li><p>‘UMAP’</p></li>
+<li><p>‘PCA’</p></li>
+<li><p>‘sfdp’</p></li>
+<li><p>‘twopi’</p></li>
+<li><p>‘map’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – Clustering method</p></li>
+<li><p><strong>noOfCluster</strong> (<em>int</em>) – Number of clusters</p></li>
+<li><p><strong>features</strong> (<em>list</em>) – Feature list</p></li>
+<li><p><strong>dimension</strong> (<em>int</em>) – Dimension of the embedding</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – GNN model</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Visualisation method</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame, filename</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_all_metrics">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_all_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'map'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_all_metrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_all_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot all the metrics for the given network on a graph</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Metrics:</dt><dd><ul class="simple">
+<li><p>‘centralities’</p></li>
+<li><p>‘nodes’</p></li>
+</ul>
+</dd>
+<dt>Layouts:</dt><dd><ul class="simple">
+<li><p>‘map’</p></li>
+<li><p>‘twopi’</p></li>
+<li><p>‘sfdp’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – Network graphs</p></li>
+<li><p><strong>metrics</strong> (<em>str</em>) – Metrics to be plotted</p></li>
+<li><p><strong>directed</strong> (<em>bool</em>) – Boolean to indicate if the graph is directed or not</p></li>
+<li><p><strong>multi</strong> (<em>bool</em>) – for multi graphs</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Layout of the plot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dataframe with all the metrics and the filename of the plot</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_boxplot">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_boxplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_boxplot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_boxplot" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the boxplot for a given metric</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Metrics:</dt><dd><ul class="simple">
+<li><p>‘kcore’</p></li>
+<li><p>‘degree’</p></li>
+<li><p>‘triangles’</p></li>
+<li><p>‘pagerank’</p></li>
+<li><p>‘betweenness_centrality’</p></li>
+<li><p>‘closeness_centrality’</p></li>
+<li><p>‘eigenvector_centrality’</p></li>
+<li><p>‘load_centrality’</p></li>
+<li><p>‘degree_centrality’</p></li>
+<li><p>‘centralities’ - All centralities</p></li>
+<li><p>‘nodes’ - All node metrics</p></li>
+<li><p>‘clustering_coefficient’ - Stochastic clustering coefficient</p></li>
+<li><p>‘shortest_path’ - Stochastic shortest path</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – Network graphs</p></li>
+<li><p><strong>metrics</strong> (<em>str</em>) – Metrics to be plotted</p></li>
+<li><p><strong>directed</strong> (<em>bool</em>) – Boolean to indicate if the graph is directed or not</p></li>
+<li><p><strong>multi</strong> (<em>bool</em>) – for multi graphs</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>df and filename</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_cluster">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noOfClusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'map'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the cluster for the given network on a graph</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Clusters:</dt><dd><ul class="simple">
+<li><p>‘louvain’</p></li>
+<li><p>‘greedy_modularity’</p></li>
+<li><p>‘label_propagation’</p></li>
+<li><p>‘asyn_lpa’</p></li>
+<li><p>‘girvan_newman’,</p></li>
+<li><p>‘k_clique’</p></li>
+<li><p>‘spectral’</p></li>
+<li><p>‘kmeans’</p></li>
+<li><p>‘agglomerative’</p></li>
+<li><p>‘dbscan’</p></li>
+<li><p>‘hierarchical’</p></li>
+</ul>
+</dd>
+<dt>Layouts:</dt><dd><ul class="simple">
+<li><p>‘map’</p></li>
+<li><p>‘twopi’</p></li>
+<li><p>‘sfdp’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – Network graphs</p></li>
+<li><p><strong>clusterType</strong> (<em>str</em>) – Type of cluster</p></li>
+<li><p><strong>noOfClusters</strong> (<em>int</em>) – Size of the cluster</p></li>
+<li><p><strong>dynamic</strong> (<em>bool</em>) – Boolean to indicate if the plot is dynamic or not</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Layout of the plot</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Cluster and filename of the plot</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_heatmap">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_heatmap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_heatmap" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the heatmap for the given network</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – </p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>filename</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_histogram">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_histogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_histogram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_histogram" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the histogram distribution for a given metric</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Metrics:</dt><dd><ul class="simple">
+<li><p>‘kcore’</p></li>
+<li><p>‘degree’</p></li>
+<li><p>‘triangles’</p></li>
+<li><p>‘pagerank’</p></li>
+<li><p>‘betweenness_centrality’</p></li>
+<li><p>‘closeness_centrality’</p></li>
+<li><p>‘eigenvector_centrality’</p></li>
+<li><p>‘load_centrality’</p></li>
+<li><p>‘degree_centrality’</p></li>
+<li><p>‘centralities’ - All centralities</p></li>
+<li><p>‘nodes’ - All node metrics</p></li>
+<li><p>‘clustering_coefficient’ - Stochastic clustering coefficient</p></li>
+<li><p>‘shortest_path’ - Stochastic shortest path</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – Network graphs</p></li>
+<li><p><strong>metrics</strong> (<em>str</em>) – Metrics to be plotted</p></li>
+<li><p><strong>directed</strong> (<em>bool</em>) – Boolean to indicate if the graph is directed or not</p></li>
+<li><p><strong>multi</strong> (<em>bool</em>) – for multi graphs</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>df and filename</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_hotspot">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_hotspot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_hotspot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_hotspot" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the hotspot and coldspot for the given network, only for spatial graphs</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dataframe with the hotspot and coldspot and filename</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_metric">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'map'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_metric"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_metric" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the metric for the given network on a graph</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Metrics:</dt><dd><ul class="simple">
+<li><p>‘kcore’</p></li>
+<li><p>‘degree’</p></li>
+<li><p>‘triangles’</p></li>
+<li><p>‘pagerank’</p></li>
+<li><p>‘betweenness_centrality’</p></li>
+<li><p>‘closeness_centrality’</p></li>
+<li><p>‘eigenvector_centrality’</p></li>
+<li><p>‘load_centrality’</p></li>
+<li><p>‘degree_centrality’</p></li>
+</ul>
+</dd>
+<dt>Layouts:</dt><dd><ul class="simple">
+<li><p>‘map’</p></li>
+<li><p>‘twopi’</p></li>
+<li><p>‘sfdp’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – Network graphs</p></li>
+<li><p><strong>metrics</strong> (<em>str</em>) – Metrics to be plotted</p></li>
+<li><p><strong>dynamic</strong> (<em>bool</em>) – Boolean to indicate if the plot is dynamic or not</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Layout of the plot</p></li>
+<li><p><strong>directed</strong> (<em>bool</em>) – Boolean to indicate if the graph is directed or not</p></li>
+<li><p><strong>multi</strong> (<em>bool</em>) – for multi graphs</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dataframe with the metric and the filename of the plot</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_network">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_network</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'map'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_network"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_network" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot network on a static graph</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Layouts:</dt><dd><ul class="simple">
+<li><p>‘map’</p></li>
+<li><p>‘twopi’</p></li>
+<li><p>‘sfdp’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – Network graphs</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Layout of the plot</p></li>
+<li><p><strong>dynamic</strong> (<em>bool</em>) – Boolean to indicate if the plot is dynamic or not</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>filename</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_node2vec">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_node2vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TSNE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_node2vec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_node2vec" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the Node2Vec embedding for the given network</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>layout:</dt><dd><ul class="simple">
+<li><p>‘TSNE’</p></li>
+<li><p>‘UMAP’</p></li>
+<li><p>‘PCA’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – p parameter for Node2Vec</p></li>
+<li><p><strong>q</strong> (<em>float</em>) – q parameter for Node2Vec</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Visualisation method</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>df and filename</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_node2vec_cluster">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_node2vec_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noOfCluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TSNE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_node2vec_cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_node2vec_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the Node2Vec embedding with cluster on top for the given network</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>method:</dt><dd><ul class="simple">
+<li><p>‘kmeans’</p></li>
+<li><p>‘spectral’</p></li>
+<li><p>‘agglomerative’</p></li>
+<li><p>‘dbscan’</p></li>
+</ul>
+</dd>
+<dt>layout:</dt><dd><ul class="simple">
+<li><p>‘TSNE’</p></li>
+<li><p>‘UMAP’</p></li>
+<li><p>‘PCA’</p></li>
+<li><p>‘sfdp’</p></li>
+<li><p>‘twopi’</p></li>
+<li><p>‘map’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – Clustering method</p></li>
+<li><p><strong>noOfCluster</strong> (<em>int</em>) – Number of clusters</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – p parameter for Node2Vec</p></li>
+<li><p><strong>q</strong> (<em>float</em>) – q parameter for Node2Vec</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Visualisation method</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame, filename</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_temporal">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_temporal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'map'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_temporal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_temporal" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the temporal graph for the given network, only for temporal graphs</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – NetworkGraphs object</p></li>
+<li><p><strong>layout</strong> (<em>str</em>) – Layout of the graph</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>filename</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.visualisation.plot_violin">
+<span class="sig-prename descclassname"><span class="pre">src.visualisation.</span></span><span class="sig-name descname"><span class="pre">plot_violin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">networkGraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/visualisation.html#plot_violin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.visualisation.plot_violin" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Function<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Plot the violin plot for a metric</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Metrics:</dt><dd><ul class="simple">
+<li><p>‘kcore’</p></li>
+<li><p>‘degree’</p></li>
+<li><p>‘triangles’</p></li>
+<li><p>‘pagerank’</p></li>
+<li><p>‘betweenness_centrality’</p></li>
+<li><p>‘closeness_centrality’</p></li>
+<li><p>‘eigenvector_centrality’</p></li>
+<li><p>‘load_centrality’</p></li>
+<li><p>‘degree_centrality’</p></li>
+<li><p>‘centralities’ - All centralities</p></li>
+<li><p>‘nodes’ - All node metrics</p></li>
+<li><p>‘clustering_coefficient’ - Stochastic clustering coefficient</p></li>
+<li><p>‘shortest_path’ - Stochastic shortest path</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>networkGraphs</strong> (<a class="reference internal" href="#src.NetworkGraphs.NetworkGraphs" title="src.NetworkGraphs.NetworkGraphs"><em>NetworkGraphs</em></a>) – Network graphs</p></li>
+<li><p><strong>metrics</strong> (<em>str</em>) – Metrics to be plotted</p></li>
+<li><p><strong>directed</strong> (<em>bool</em>) – Boolean to indicate if the graph is directed or not</p></li>
+<li><p><strong>multi</strong> (<em>bool</em>) – for multi graphs</p></li>
+<li><p><strong>fullPath</strong> (<em>bool</em>) – Boolean to indicate if the full path is required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>df and filename</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="module-src">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Permalink to this heading"></a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Permalink to this heading">¶</a></h2>
 </section>
 </section>
 
 
-           </div>
           </div>
-          <footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, Alpha Team.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/favicon.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="index.html">AlphaTeam</a></h1>
 
-</body>
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Alpha Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/src.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
 </html>
